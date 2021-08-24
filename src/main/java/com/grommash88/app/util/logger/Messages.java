@@ -2,7 +2,7 @@ package com.grommash88.app.util.logger;
 
 public enum Messages {
 
-  EXIT_MSG("Storage is closed"),
+  EXIT_MSG("EXIT from program."),
 
   MARKET_EXIST_MSG("The \"%s\" store already exists."),
   MARKET_NO_EXIST_MSG("The \"%s\" store does not exists."),

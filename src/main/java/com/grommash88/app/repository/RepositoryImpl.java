@@ -91,9 +91,8 @@ public class RepositoryImpl implements Repository, AutoCloseable {
   @Override
   public void putProductUpForSaleInAMarket(String description) {
 
-    String[] data = description.split("\\s");
-    String marketName = data[ONE].trim();
-    String productName = data[ZERO].trim();
+    String marketName = description.substring(description.lastIndexOf(" ")).trim();
+    String productName = description.substring(ZERO, description.lastIndexOf(" ")).trim();
 
     Document addedProductDoc = findProductByName(productName)
         .orElseThrow(() -> new IllegalArgumentException(String
