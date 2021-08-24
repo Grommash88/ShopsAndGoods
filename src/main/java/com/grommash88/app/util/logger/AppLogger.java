@@ -19,6 +19,7 @@ public class AppLogger {
 
     LOGGER.error(EXCEPTION, Arrays.toString(e.getStackTrace()).concat(System.lineSeparator())
         .concat(e.getMessage()));
+    LOGGER.info(CONSOLE, e.getMessage());
   }
 
   public static void logMessage(String message) {
